@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+  <meta charset="utf-8">
+   
+  <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <style>
+    body {
+      font-family: Helvetica;
+      text-align: center;
+    }
+
+    #birthday-greeting {
+      font-size: 72px;
+      color: red;
+      text-transform: uppercase;
+    }
+  </style>
+   
+  <script>
+    var myRequest = new XMLHttpRequest();
+    myRequest.onreadystatechange = function () {
+      if (myRequest.readyState === 4) {
+        document.getElementById('ajax-content').innerHTML = myRequest.responseText;
+      }
+    };
+    function sendTheAJAX() {
+      myRequest.open('GET', 'surprise.html');
+      myRequest.send();
+      document.getElementById('reveal').style.display = 'none';
+    }
+  </script>
+</head>
+
+<body>
+    <h1>TODAY ITS YOUR SPECIAL DAY</h1>
+   
+  <!-- <h1 id='birthday-greeting'>TODAY ITS YOUR BIRTHDAY DAY</h1> -->
+    <button type='submit' onclick=sendTheAJAX() id='reveal' class='button'>Why's That?</button>
+    <div id='ajax-content'></div>
+</body>
+
+</html>

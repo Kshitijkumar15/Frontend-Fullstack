@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 2</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<h1>Learn how to include one component in another</h1>
+<div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+function MyButton(props) {
+return <button>I'm a button. {props.text}</button>;
+}
+function MyInput(props) {
+return <input onChange={() => props.setText(event.target.value)} />;
+}
+function MyApp() {
+const [text, setText] = useState("");
+return (
+<div>
+<h2>Welcome to my application</h2>
+<h3>Type some content in the Textarea</h3>
+<MyButton text={text} />
+<MyInput setText={setText} />
+</div>
+);
+}
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<MyApp />);
+</script>
+</body>
+</html>
