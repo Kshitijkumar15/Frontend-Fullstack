@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 3</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+.avatar {
+border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const user = {
+name: "A. P. J. Abdul Kalam",
+imageUrl:
+"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A._P._J._Abdul_Kalam.jpg/800px-A._P._J._Abdul_Kalam.jpg",
+imageSize: 250,
+};
+function MyApp() {
+return (
+<>
+<h1>{user.name}</h1>
+<img
+className="avatar"
+src={user.imageUrl}
+alt={"Photo of " + user.name}
+style={{
+width: user.imageSize,
+height: user.imageSize,
+}}
+/>
+</>
+);
+}
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<MyApp />);
+</script>
+</body>
+</html>
