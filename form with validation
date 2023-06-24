@@ -105,7 +105,7 @@ function lengthRestriction1(elem, min, max)
  }
  }
  </script>
-<center ><font color="blue" size="6" face="arial">Student Registration Form REVA UNIVERSITY</font><br /><br /><br />
+<center ><font color="blue" size="6" face="arial">Student Registration </font><br /><br /><br />
 
 <form onsubmit='return formValidator()' action="right.html">
 <fieldset>
@@ -136,3 +136,10 @@ function lengthRestriction1(elem, min, max)
 
 
 
+*********************************************************************************
+right.html
+<html>
+<body style="background-color:green;">
+<h1> Registration done successfully </h1>
+</body>
+</html>
