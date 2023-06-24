@@ -1,0 +1,230 @@
+Create a basis application to learn how react works
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 1</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+function MyApp() {
+return (
+<div>
+<h1>Spin up a simple component to learn how to use react</h1>
+<h2>My First React JS Program</h2>
+</div>
+);
+}
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<MyApp />);
+</script>
+</body>
+</html>
+
+***************************************************************************************************
+Learn how to include one component in another
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 2</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<h1>Learn how to include one component in another</h1>
+<div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+function MyButton(props) {
+return <button>I'm a button. {props.text}</button>;
+}
+function MyInput(props) {
+return <input onChange={() => props.setText(event.target.value)} />;
+}
+function MyApp() {
+const [text, setText] = useState("");
+return (
+<div>
+<h2>Welcome to my application</h2>
+<h3>Type some content in the Textarea</h3>
+<MyButton text={text} />
+<MyInput setText={setText} />
+</div>
+);
+}
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<MyApp />);
+</script>
+</body>
+</html>
+
+***************************************************************************************************
+
+Learn how to write JSX and apply styles to components and manage state
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 3</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+.avatar {
+border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const user = {
+name: "A. P. J. Abdul Kalam",
+imageUrl:
+"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A._P._J._Abdul_Kal
+am.jpg/800px-A._P._J._Abdul_Kalam.jpg",
+imageSize: 250,
+};
+function MyApp() {
+return (
+<>
+<h1>{user.name}</h1>
+<img
+className="avatar"
+src={user.imageUrl}
+alt={"Photo of " + user.name}
+style={{
+width: user.imageSize,
+height: user.imageSize,
+}}
+/>
+</>
+);
+}
+const container = document.getElementById("root");
+const root = ReactDOM.createRoot(container);
+root.render(<MyApp />);
+</script>
+</body>
+</html>
+
+***************************************************************************************************
+
+Create an arithmetic calculator using react
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 4</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+function Calculator() {
+const [firstNumber, setFirstNumber] = useState(0);
+const [secondNumber, setSecondNumber] = useState(0);
+const [result, setResult] = useState(0);
+return (
+<>
+<h1>Calculator</h1>
+<input type='number' value={firstNumber} onChange={(e) =>
+setFirstNumber(parseInt(e.target.value))} />
+<input type='number' value={secondNumber} onChange={(e) =>
+setSecondNumber(parseInt(e.target.value))} />
+<button onClick={() => setResult(firstNumber +
+secondNumber)}>Add</button>
+<button onClick={() => setResult(firstNumber -
+secondNumber)}>Subtract</button>
+<button onClick={() => setResult(firstNumber *
+secondNumber)}>Multiply</button>
+<button onClick={() => setResult(firstNumber /
+secondNumber)}>Divide</button>
+<h2>Result: {result}</h2>
+</>
+);
+}
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<Calculator />);
+</script>
+</body>
+</html>
+***************************************************************************************************
+
+Generate random names from an API using react
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Program 5</title>
+<script
+src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script
+src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect } = React;
+function NamesList() {
+const [names, setNames] = useState([]);
+useEffect(() => {
+fetch('https://randomuser.me/api/?results=10')
+.then((response) => response.json())
+.then((data) => {
+setNames(data.results);
+});
+}, []);
+const addName = () => {
+fetch('https://randomuser.me/api/')
+.then((response) => response.json())
+.then((data) => {
+setNames([...names, ...data.results]);
+});
+};
+return (
+<>
+<h1>Names List</h1>
+<button onClick={addName}>Add Name</button>
+<ul>
+{names.map((name) => (
+<li key={name.login.uuid}>
+{name.name.first} {name.name.last}
+</li>
+))}
+</ul>
+</>
+);
+}
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.render(<NamesList />);
+</script>
+</body>
+</html>
