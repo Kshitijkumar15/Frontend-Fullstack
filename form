@@ -1,0 +1,110 @@
+<html>
+ <head><title>Registration Form Validation</title></head>
+ <body bgcolor="#E4F0F8">
+ <script type='text/javascript'>
+ function formValidator()
+ {
+ // Make quick references to our fields
+ var firstname = document.getElementById('firstname');
+ var lastname = document.getElementById('lastname');
+ var pin=document.getElementById('pin');
+ var mobileno = document.getElementById('mobileno');
+ var addr=document.getElementById('addr');
+ // Check each input in the order that it appears in the form!
+ if(notEmpty(firstname, "first name can not be empty")){
+ if(isAlphabet(firstname, "Please enter only letters for your Firstname")){
+ if(isAlphabet(lastname, "Please enter only letters for your Lastname")){
+ if(notEmpty(addr, "please enter the address")){
+ if(isNumeric(mobileno, "Please enter a valid mobileno")){
+ if(isNumeric(pin, "Please enter a valid pin number")){
+ if(lengthRestriction1(mobileno, 10 , 10)){
+ if(lengthRestriction2(pin, 6 , 6)){
+ return true;
+ } } } }
+ }
+ }
+ }
+ } 
+ return false;
+ }
+function notEmpty(elem, helperMsg){ 
+if(elem.value.length == 0){
+ alert(helperMsg);
+ elem.focus(); // set the focus to this input
+ return false;
+ }
+ return true;
+ }
+function isNumeric(elem, helperMsg){
+ var numericExpression = /^[0-9]+$/;
+ if(elem.value.match(numericExpression)){
+ return true;
+ }else{
+ alert(helperMsg);
+ elem.focus();
+ return false;
+ }
+ }
+function isAlphabet(elem, helperMsg){
+ var alphaExp = /^[a-zA-Z]+$/;
+ if(elem.value.match(alphaExp)){
+ return true;
+ }else{
+ alert(helperMsg);
+ elem.focus();
+ return false;
+ }
+ }
+ function lengthRestriction2(elem, min, max)
+ {
+ var uInput = elem.value;
+ if(uInput.length >= min && uInput.length <= max)
+ {
+ return true;
+ }
+ else {
+ alert("Please enter 6 numbers only");
+ elem.focus();
+ return false;
+ }
+ }
+
+function lengthRestriction2(elem, min, max)
+ {
+ var uInput = elem.value;
+ if(uInput.length >= min && uInput.length <= max)
+ {
+ return true;
+ }
+ else {
+ alert("Please enter 10 numbers only");
+ elem.focus();
+ return false;
+ }
+ }
+ </script>
+<center ><font color="blue" size="6" face="arial">Student Registration Form </font><br /><br /><br />
+<form onsubmit='return formValidator()' action="right.html">
+<fieldset>
+ First Name<font color="red">* </font>
+ <input type='text' id='firstname' /><br /><br />
+ Last Name<font color="red"><font color="red">* </font> </font> &nbsp;&nbsp;&nbsp;
+ <input type='text' id='lastname' /><br /><br />
+ Address<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+ <textarea rows="2" cols="20" id='addr' /></textarea> <br /> <br/>
+ Mobile No<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+ <input type='text' id='mobileno' /><br /><br /><br />
+ Pin no<font color="red">* </font> &nbsp;&nbsp;&nbsp;
+ <input type='text' id='pin' /><br /><br /><br />
+ room: <input type='radio' name="room">ac
+ <input type='radio' name="room">non-ac<br/><br />
+ <input type='Submit' value='submit' />
+ <input type='Reset' value='reset' />
+<fielset>
+ </center>
+ </form>
+ </body>
+</html>
+
+
+
