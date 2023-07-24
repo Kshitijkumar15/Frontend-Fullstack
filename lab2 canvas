@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Canvas </title>
+    <title>Canvas Program </title>
     <style>
         canvas {
             border: 1px solid black;
