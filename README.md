@@ -5,9 +5,10 @@
 - ReactJS (Tribute to APJ ABDUL KALAM)
 - AngulaJS (Planets)
 - AJAX (Birthday)
-- Javascript (Form and form with validation)
+- Javascript (Form and Form with validation)
 - Canvas
 - React programs
+- )ne-component-in-another(React)
 - React Calculator
 - jQuery (Fade)
 
