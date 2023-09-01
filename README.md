@@ -211,7 +211,7 @@ The toggle effect combines both the fade-in and fade-out effects into a single a
 
 $~~~~~~~~~~~$
 
-## Largest_of_3.
+## Largest_of_3
 
 ### Description:
 This HTML file contains a simple JavaScript program that takes three numbers as input and determines the largest among them. It uses basic conditional statements to compare the numbers and display the largest one to the user.
@@ -224,7 +224,7 @@ This HTML file contains a simple JavaScript program that takes three numbers as 
 ### Example:
 - If you enter `5`, `12`, and `8`, the alert will display: "The largest number is: 12"
 
-## odd_even.
+## odd_even
 
 ### Description:
 This HTML file contains a simple JavaScript program that determines whether a given number is even or odd. It takes a number as input and uses the modulo operator to check its divisibility by 2. If the number is divisible by 2, it is considered even; otherwise, it is considered odd.
