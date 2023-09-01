@@ -222,9 +222,11 @@ This HTML file contains a simple JavaScript program that takes three numbers as 
 3. After entering the numbers, the browser will show an alert indicating the largest number among the three.
 
 ### Example:
-- If you enter `5`, `12`, and `8`, the alert will display: "The largest number is: 12"
+- If you enter `9`, `92`, and `6`, the alert will display: "The largest number is: 92"
 
-## odd_even
+$~~~~~~~~~~~$
+
+## Odd_Even
 
 ### Description:
 This HTML file contains a simple JavaScript program that determines whether a given number is even or odd. It takes a number as input and uses the modulo operator to check its divisibility by 2. If the number is divisible by 2, it is considered even; otherwise, it is considered odd.
@@ -235,8 +237,8 @@ This HTML file contains a simple JavaScript program that determines whether a gi
 3. After entering the number, the browser will show an alert indicating whether the number is "Even" or "Odd".
 
 ### Example:
-- If you enter `7`, the alert will display: "Odd"
-- If you enter `12`, the alert will display: "Even"
+- If you enter `3`, the alert will display: "Odd"
+- If you enter `20`, the alert will display: "Even"
 - If you enter a non-numeric input, the alert will display: "Invalid input. Please enter a valid number."
 
 
