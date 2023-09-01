@@ -121,7 +121,7 @@ To use the registration form and validation script, follow these steps:
 
 4. If all fields pass validation, the form will be submitted to the `right.html` page, indicating a successful registration.
 
-## Form Fields and Validation Criteria
+### Form Fields and Validation Criteria
 
 The registration form consists of the following fields, each with its own validation criteria:
 
