@@ -7,6 +7,7 @@
 - AJAX (Birthday)
 - Javascript (Form and form with validation)
 - Canvas
+- React programs
 - React Calculator
 - jQuery (Fade)
 
