@@ -14,6 +14,7 @@
 - One-component-in-another(React)
 - React Calculator
 - jQuery (Fade)
+- Largest of 3 and Odd_Even
 
 
 ## A. P. J. Abdul Kalam - React App
@@ -150,7 +151,7 @@ The `formvalidator ()` function is called when the form is submitted. It sequent
 
 $~~~~~~~~~~~$
 
-## Canvas Drawing Example
+## Canvas
 
 This repository contains a simple HTML file demonstrating how to create a canvas element and implement basic drawing functionality using JavaScript. Users can click and drag the mouse on the canvas to draw lines.
 
