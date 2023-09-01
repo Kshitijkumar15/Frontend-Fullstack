@@ -44,7 +44,7 @@ This file contains the main React component that renders the timeline of Dr. A. 
 
 The CSS file provides styling for the app. It includes a class `.avatar` that gives the circular border to the displayed image.
 
-
+$~~~~~~~~~~~$
 
 ## Planets - AngularJS 
 
@@ -74,7 +74,7 @@ This AngularJS application provides an interactive interface to explore informat
 - This app is meant for educational purposes and serves as a basic example of an AngularJS application.
 - You can modify and enhance the app's functionality or style according to your preferences.
 
-
+$~~~~~~~~~~~$
 
 ## Birthday
 
@@ -102,7 +102,7 @@ This file contains the surprise birthday greeting message. It includes:
 
 When you click the "Why's that?" button on the main page (`Birthday.html`), the JavaScript code uses the `XMLHttpRequest` object to asynchronously fetch the content of the `surprise.html` file. Once the request is complete and the content is received, the fetched greeting message is displayed in the `ajax-content` `<div>`, replacing the button.
 
-
+$~~~~~~~~~~~$
 
 ## React Calculator App
 
@@ -119,6 +119,7 @@ This repository contains a simple calculator application built using React. The 
    - "Divide" button: Divides the first number by the second number.
 4. The result of the selected operation will be displayed below the buttons.
                                  
+$~~~~~~~~~~~$
 
 ## jQuery - Fade In, Fade Out, Fade Toggle
 
